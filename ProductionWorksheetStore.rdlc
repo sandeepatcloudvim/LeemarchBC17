@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="Sales_Header__Your_Reference_">
+          <DataField>Sales_Header__Your_Reference_</DataField>
+        </Field>
+        <Field Name="Sales_Header__Bill_to_Name_">
+          <DataField>Sales_Header__Bill_to_Name_</DataField>
+        </Field>
+        <Field Name="Sales_Header__Shipment_Date_">
+          <DataField>Sales_Header__Shipment_Date_</DataField>
+        </Field>
+        <Field Name="Sales_Header__Order_Date_">
+          <DataField>Sales_Header__Order_Date_</DataField>
+        </Field>
+        <Field Name="CompanyInformation_Picture">
+          <DataField>CompanyInformation_Picture</DataField>
+        </Field>
+        <Field Name="Sales_Header__Sell_to_Customer_No__">
+          <DataField>Sales_Header__Sell_to_Customer_No__</DataField>
+        </Field>
+        <Field Name="Production_WorksheetCaption">
+          <DataField>Production_WorksheetCaption</DataField>
+        </Field>
+        <Field Name="Store_No__Caption">
+          <DataField>Store_No__Caption</DataField>
+        </Field>
+        <Field Name="Sales_Header__Bill_to_Name_Caption">
+          <DataField>Sales_Header__Bill_to_Name_Caption</DataField>
+        </Field>
+        <Field Name="Sales_Header__Shipment_Date_Caption">
+          <DataField>Sales_Header__Shipment_Date_Caption</DataField>
+        </Field>
+        <Field Name="Sales_Header__Order_Date_Caption">
+          <DataField>Sales_Header__Order_Date_Caption</DataField>
+        </Field>
+        <Field Name="NOTES__MAKE_ONE_ADDITIONAL_MEDIUM_JERSEY___GIVE_TO_CUSTOM_INSTEAD_OF_SHIPPING_TO_CUSTOMERCaption">
+          <DataField>NOTES__MAKE_ONE_ADDITIONAL_MEDIUM_JERSEY___GIVE_TO_CUSTOM_INSTEAD_OF_SHIPPING_TO_CUSTOMERCaption</DataField>
+        </Field>
+        <Field Name="Nota__Favor_de_hacer_una_camisa_en_Mediano_para_dar_al_departamento_de_Custom_en_vez_de_enviarlo_al_cliente_Caption">
+          <DataField>Nota__Favor_de_hacer_una_camisa_en_Mediano_para_dar_al_departamento_de_Custom_en_vez_de_enviarlo_al_cliente_Caption</DataField>
+        </Field>
+        <Field Name="Print_ProfileCaption">
+          <DataField>Print_ProfileCaption</DataField>
+        </Field>
+        <Field Name="Sales_Header__Sell_to_Customer_No__Caption">
+          <DataField>Sales_Header__Sell_to_Customer_No__Caption</DataField>
+        </Field>
+        <Field Name="Sales_Header_Document_Type">
+          <DataField>Sales_Header_Document_Type</DataField>
+        </Field>
+        <Field Name="Sales_Header_No_">
+          <DataField>Sales_Header_No_</DataField>
+        </Field>
+        <Field Name="Total_">
+          <DataField>Total_</DataField>
+        </Field>
+        <Field Name="SizeCodeArray_1_">
+          <DataField>SizeCodeArray_1_</DataField>
+        </Field>
+        <Field Name="SizeCodeArray_2_">
+          <DataField>SizeCodeArray_2_</DataField>
+        </Field>
+        <Field Name="SizeCodeArray_4_">
+          <DataField>SizeCodeArray_4_</DataField>
+        </Field>
+        <Field Name="SizeCodeArray_3_">
+          <DataField>SizeCodeArray_3_</DataField>
+        </Field>
+        <Field Name="SizeCodeArray_6_">
+          <DataField>SizeCodeArray_6_</DataField>
+        </Field>
+        <Field Name="SizeCodeArray_5_">
+          <DataField>SizeCodeArray_5_</DataField>
+        </Field>
+        <Field Name="SizeCodeArray_8_">
+          <DataField>SizeCodeArray_8_</DataField>
+        </Field>
+        <Field Name="SizeCodeArray_7_">
+          <DataField>SizeCodeArray_7_</DataField>
+        </Field>
+        <Field Name="SizeQtyArray_1_">
+          <DataField>SizeQtyArray_1_</DataField>
+        </Field>
+        <Field Name="SizeQtyArray_1_Format">
+          <DataField>SizeQtyArray_1_Format</DataField>
+        </Field>
+        <Field Name="TotalQty">
+          <DataField>TotalQty</DataField>
+        </Field>
+        <Field Name="TotalQtyFormat">
+          <DataField>TotalQtyFormat</DataField>
+        </Field>
+        <Field Name="SizeQtyArray_2_">
+          <DataField>SizeQtyArray_2_</DataField>
+        </Field>
+        <Field Name="SizeQtyArray_2_Format">
+          <DataField>SizeQtyArray_2_Format</DataField>
+        </Field>
+        <Field Name="SizeQtyArray_4_">
+          <DataField>SizeQtyArray_4_</DataField>
+        </Field>
+        <Field Name="SizeQtyArray_4_Format">
+          <DataField>SizeQtyArray_4_Format</DataField>
+        </Field>
+        <Field Name="SizeQtyArray_3_">
+          <DataField>SizeQtyArray_3_</DataField>
+        </Field>
+        <Field Name="SizeQtyArray_3_Format">
+          <DataField>SizeQtyArray_3_Format</DataField>
+        </Field>
+        <Field Name="SizeQtyArray_6_">
+          <DataField>SizeQtyArray_6_</DataField>
+        </Field>
+        <Field Name="SizeQtyArray_6_Format">
+          <DataField>SizeQtyArray_6_Format</DataField>
+        </Field>
+        <Field Name="SizeQtyArray_5_">
+          <DataField>SizeQtyArray_5_</DataField>
+        </Field>
+        <Field Name="SizeQtyArray_5_Format">
+          <DataField>SizeQtyArray_5_Format</DataField>
+        </Field>
+        <Field Name="SizeQtyArray_8_">
+          <DataField>SizeQtyArray_8_</DataField>
+        </Field>
+        <Field Name="SizeQtyArray_8_Format">
+          <DataField>SizeQtyArray_8_Format</DataField>
+        </Field>
+        <Field Name="SizeQtyArray_7_">
+          <DataField>SizeQtyArray_7_</DataField>
+        </Field>
+        <Field Name="SizeQtyArray_7_Format">
+          <DataField>SizeQtyArray_7_Format</DataField>
+        </Field>
+        <Field Name="SalesLine__Pattern_Code_">
+          <DataField>SalesLine__Pattern_Code_</DataField>
+        </Field>
+        <Field Name="SalesLine__No__">
+          <DataField>SalesLine__No__</DataField>
+        </Field>
+        <Field Name="SalesLine_Description">
+          <DataField>SalesLine_Description</DataField>
+        </Field>
+        <Field Name="SalesLine_Fit">
+          <DataField>SalesLine_Fit</DataField>
+        </Field>
+        <Field Name="SalesLine_Zip">
+          <DataField>SalesLine_Zip</DataField>
+        </Field>
+        <Field Name="SalesLine_Pad">
+          <DataField>SalesLine_Pad</DataField>
+        </Field>
+        <Field Name="SalesLine_Fabric">
+          <DataField>SalesLine_Fabric</DataField>
+        </Field>
+        <Field Name="SalesLine__Lycra_Color_">
+          <DataField>SalesLine__Lycra_Color_</DataField>
+        </Field>
+        <Field Name="SizeQtyNoHistArray_1_">
+          <DataField>SizeQtyNoHistArray_1_</DataField>
+        </Field>
+        <Field Name="SizeQtyNoHistArray_2_">
+          <DataField>SizeQtyNoHistArray_2_</DataField>
+        </Field>
+        <Field Name="SizeQtyNoHistArray_4_">
+          <DataField>SizeQtyNoHistArray_4_</DataField>
+        </Field>
+        <Field Name="SizeQtyNoHistArray_3_">
+          <DataField>SizeQtyNoHistArray_3_</DataField>
+        </Field>
+        <Field Name="SizeQtyNoHistArray_6_">
+          <DataField>SizeQtyNoHistArray_6_</DataField>
+        </Field>
+        <Field Name="SizeQtyNoHistArray_5_">
+          <DataField>SizeQtyNoHistArray_5_</DataField>
+        </Field>
+        <Field Name="SizeQtyNoHistArray_8_">
+          <DataField>SizeQtyNoHistArray_8_</DataField>
+        </Field>
+        <Field Name="SizeQtyNoHistArray_7_">
+          <DataField>SizeQtyNoHistArray_7_</DataField>
+        </Field>
+        <Field Name="ProofPath">
+          <DataField>ProofPath</DataField>
+        </Field>
+        <Field Name="TotalQty_Control1000000049">
+          <DataField>TotalQty_Control1000000049</DataField>
+        </Field>
+        <Field Name="TotalQty_Control1000000049Format">
+          <DataField>TotalQty_Control1000000049Format</DataField>
+        </Field>
+        <Field Name="Comments_1_">
+          <DataField>Comments_1_</DataField>
+        </Field>
+        <Field Name="Comments_2_">
+          <DataField>Comments_2_</DataField>
+        </Field>
+        <Field Name="LycraCaption">
+          <DataField>LycraCaption</DataField>
+        </Field>
+        <Field Name="FabricCaption">
+          <DataField>FabricCaption</DataField>
+        </Field>
+        <Field Name="ZipCaption">
+          <DataField>ZipCaption</DataField>
+        </Field>
+        <Field Name="PadCaption">
+          <DataField>PadCaption</DataField>
+        </Field>
+        <Field Name="DescriptionCaption">
+          <DataField>DescriptionCaption</DataField>
+        </Field>
+        <Field Name="FitCaption">
+          <DataField>FitCaption</DataField>
+        </Field>
+        <Field Name="StyleCaption">
+          <DataField>StyleCaption</DataField>
+        </Field>
+        <Field Name="PatternCaption">
+          <DataField>PatternCaption</DataField>
+        </Field>
+        <Field Name="In_Box_Means_No_Order_HistoryCaption">
+          <DataField>In_Box_Means_No_Order_HistoryCaption</DataField>
+        </Field>
+        <Field Name="ProofPathCaption">
+          <DataField>ProofPathCaption</DataField>
+        </Field>
+        <Field Name="Total_PcsCaption">
+          <DataField>Total_PcsCaption</DataField>
+        </Field>
+        <Field Name="Integer_Number">
+          <DataField>Integer_Number</DataField>
+        </Field>
+        <Field Name="SalesHeader__No__">
+          <DataField>SalesHeader__No__</DataField>
+        </Field>
+        <Field Name="SalesHeader__External_Document_No__">
+          <DataField>SalesHeader__External_Document_No__</DataField>
+        </Field>
+        <Field Name="Sales_OrderCaption">
+          <DataField>Sales_OrderCaption</DataField>
+        </Field>
+        <Field Name="External_Document_No___Store_Order_No__Caption">
+          <DataField>External_Document_No___Store_Order_No__Caption</DataField>
+        </Field>
+        <Field Name="Integer2_Number">
+          <DataField>Integer2_Number</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

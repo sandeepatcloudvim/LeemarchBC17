@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="LabelData1_1">
+          <DataField>LabelData1_1</DataField>
+        </Field>
+        <Field Name="LabelData1_2">
+          <DataField>LabelData1_2</DataField>
+        </Field>
+        <Field Name="LabelData1_3">
+          <DataField>LabelData1_3</DataField>
+        </Field>
+        <Field Name="LabelData1_4">
+          <DataField>LabelData1_4</DataField>
+        </Field>
+        <Field Name="LabelData1_5">
+          <DataField>LabelData1_5</DataField>
+        </Field>
+        <Field Name="LabelData1_6">
+          <DataField>LabelData1_6</DataField>
+        </Field>
+        <Field Name="LabelData1_7">
+          <DataField>LabelData1_7</DataField>
+        </Field>
+        <Field Name="LabelData2_1">
+          <DataField>LabelData2_1</DataField>
+        </Field>
+        <Field Name="LabelData2_2">
+          <DataField>LabelData2_2</DataField>
+        </Field>
+        <Field Name="LabelData2_3">
+          <DataField>LabelData2_3</DataField>
+        </Field>
+        <Field Name="LabelData2_4">
+          <DataField>LabelData2_4</DataField>
+        </Field>
+        <Field Name="LabelData2_5">
+          <DataField>LabelData2_5</DataField>
+        </Field>
+        <Field Name="LabelData2_6">
+          <DataField>LabelData2_6</DataField>
+        </Field>
+        <Field Name="LabelData2_7">
+          <DataField>LabelData2_7</DataField>
+        </Field>
+        <Field Name="LabelData3_1">
+          <DataField>LabelData3_1</DataField>
+        </Field>
+        <Field Name="LabelData3_2">
+          <DataField>LabelData3_2</DataField>
+        </Field>
+        <Field Name="LabelData3_3">
+          <DataField>LabelData3_3</DataField>
+        </Field>
+        <Field Name="LabelData3_4">
+          <DataField>LabelData3_4</DataField>
+        </Field>
+        <Field Name="LabelData3_5">
+          <DataField>LabelData3_5</DataField>
+        </Field>
+        <Field Name="LabelData3_6">
+          <DataField>LabelData3_6</DataField>
+        </Field>
+        <Field Name="LabelData3_7">
+          <DataField>LabelData3_7</DataField>
+        </Field>
+        <Field Name="LabelData4_1">
+          <DataField>LabelData4_1</DataField>
+        </Field>
+        <Field Name="LabelData4_2">
+          <DataField>LabelData4_2</DataField>
+        </Field>
+        <Field Name="LabelData4_3">
+          <DataField>LabelData4_3</DataField>
+        </Field>
+        <Field Name="LabelData4_4">
+          <DataField>LabelData4_4</DataField>
+        </Field>
+        <Field Name="LabelData4_5">
+          <DataField>LabelData4_5</DataField>
+        </Field>
+        <Field Name="LabelData4_6">
+          <DataField>LabelData4_6</DataField>
+        </Field>
+        <Field Name="LabelData4_7">
+          <DataField>LabelData4_7</DataField>
+        </Field>
+        <Field Name="LabelData5_1">
+          <DataField>LabelData5_1</DataField>
+        </Field>
+        <Field Name="LabelData5_2">
+          <DataField>LabelData5_2</DataField>
+        </Field>
+        <Field Name="LabelData5_3">
+          <DataField>LabelData5_3</DataField>
+        </Field>
+        <Field Name="LabelData5_4">
+          <DataField>LabelData5_4</DataField>
+        </Field>
+        <Field Name="LabelData5_5">
+          <DataField>LabelData5_5</DataField>
+        </Field>
+        <Field Name="LabelData5_6">
+          <DataField>LabelData5_6</DataField>
+        </Field>
+        <Field Name="LabelData5_7">
+          <DataField>LabelData5_7</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
